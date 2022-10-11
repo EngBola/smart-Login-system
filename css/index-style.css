@@ -1,1 +1,63 @@
-body{background-color:#24353F}.bShadow{box-shadow:rgb(0,0,0) -5px 2px 54px -9px}.t-color{color:#17a2b8}input{background-color:#24353F!important;padding:8px!important;color:white!important}.form-control::placeholder{color:white!important;opacity:.8;font-weight:300;font-size:1.2rem}.form-control:focus{border-color:#86b7fe;outline:0;box-shadow:0 0 0 .1rem rgb(13 110 253 / 25%)}.mybtn{background-color:transparent!important;border:#17a2b8 1px solid!important;border-radius:3px;color:#17a2b8;transition:all .3s}.mybtn:hover{background-color:#17a2b8!important;color:white!important}.signup span{padding:1px 0;margin:2px;color:rgb(196,21,21);background-color:rgba(121,71,71,.2);text-align:center}.content a{cursor:pointer}.content ul li{list-style:none;display:inline-block;margin-right:5px;color:white;margin-top:10px;font-size:1.2rem}.content ul li a{text-decoration:none;color:black}
+body{
+    background-color: #24353F;
+}
+.bShadow{
+    box-shadow: rgb(0, 0, 0) -5px 2px 54px -9px;
+}
+.t-color{
+    color: #17a2b8;
+}
+input{
+    background-color: #24353F !important;
+    padding: 8px !important;
+    color: white !important;
+}
+.form-control::placeholder{
+    color: white !important;
+    opacity: 0.8;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+.form-control:focus {
+
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(13 110 253 / 25%);
+}
+
+.mybtn{
+    background-color: transparent !important;
+    border: #17a2b8 1px solid !important;
+    border-radius: 3px;
+    color: #17a2b8;
+    transition: all 0.3s;
+}
+.mybtn:hover{
+    background-color: #17a2b8 !important;
+    color: white !important;
+}
+
+.signup span{
+    padding: 1px 0px;
+    margin: 2px;
+    color: rgb(196, 21, 21);
+    background-color: rgba(121, 71, 71, 0.2);
+    text-align: center;
+}
+.content a{
+    cursor: pointer;
+}
+
+.content ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+    color: white;
+    margin-top: 10px;
+    font-size: 1.2rem;
+
+}
+.content ul li a{
+    text-decoration: none;
+    color:black
+}
