@@ -30,7 +30,9 @@ if (sessionStorage.getItem("session") == null) {
 }
 
 function routing(){
-
+    let email;
+    let myPassword;
+    let msg;
     if (curentPage == "loginPage"){
         content.innerHTML=`<h1 class="text-center t-color py-4">Smart Login System</h1> 
         <div class="login mx-5">
@@ -45,7 +47,7 @@ function routing(){
         email = document.getElementById("email");
         myPassword = document.getElementById("psw");
         msg = document.querySelector(".errorMsg");
-        var toLogin = document.querySelector("#loginBtn").addEventListener("click", login );
+        let toLogin = document.querySelector("#loginBtn").addEventListener("click", login );
         function login(){
             console.log(email.value);
             console.log(myPassword.value);
@@ -55,7 +57,7 @@ function routing(){
             }else{
                 console.log(email.value);
                 console.log(myPassword.value);
-                for(var i=0 ; i < users.length ; i++){
+                for(let i=0 ; i < users.length ; i++){
                     if(users[i].userEmail == email.value.toLowerCase() && users[i].userPass == myPassword.value){
                         curentPage="homePage";
                         beginSession(users[i]);
@@ -89,31 +91,31 @@ function routing(){
             <p class="py-3 text-white fw-semibold d-inline-block">You have an account? </p> <a class="signin text-white text-decoration-none"> Signin</a>
             </div>
         </div>`;        
-        var username = document.getElementById("username");
-        var email = document.getElementById("email");
-        var myPassword = document.getElementById("pws");
-        var signupBTN = document.querySelector("#regBtn");
-        var testname="";
-        var testpass="";
-        var testmail="";
-        var testDmail="";
-        email.addEventListener("keyup", emailDub);
-        var toSignup = signupBTN.addEventListener("click" , regist);
+        let username = document.getElementById("username");
+        email = document.getElementById("email");
+        myPassword = document.getElementById("pws");
+        let signupBTN = document.querySelector("#regBtn");
+        let testname="";
+        let testpass="";
+        let testmail="";
+        let testDmail="";
         
+        let toSignup = signupBTN.addEventListener("click" , regist);
+        email.addEventListener("keyup", emailDub);
         function regist(){
             //============validation================//
             validName();
             validEmail();
             emailDub();
             validPass();
-            var noError=0;
+            let noError=0;
             testname!=true?document.getElementById("nerr").innerHTML =testname:noError++;
             testmail!=true?document.getElementById("eerr").innerHTML=testmail:noError++;
             testDmail!=true?document.getElementById("derr").innerHTML=testDmail:noError++;
             testpass!=true?document.getElementById("perr").innerHTML=testpass:noError++;
             
             if(noError ==4){
-                var newUser ={
+                let newUser ={
                     userId : `${(users.length+1)}`,
                     userName:username.value,
                     userEmail:email.value.toLowerCase(),
@@ -147,8 +149,8 @@ function routing(){
         }
         function emailDub(){
             if(email.value !=""){
-                var result=0;
-                for(var i=0 ; i < users.length ; i++){
+                let result=0;
+                for(let i=0 ; i < users.length ; i++){
                     if(users[i].userEmail == email.value.toLowerCase()){
                         result++;
                     break;
@@ -184,7 +186,7 @@ function routing(){
                                 <li><span class="badge text-bg-info"><i class="fa fa-envelope"></i>  <a href="mailto:${session.uEmail}">${session.uEmail}</a></span></li>
                                 <li><span class="badge text-bg-warning"><i class="fa fa-clock-rotate-left"></i> ${session.rDate}</span></li>
                             </ul>`;
-        var logoutBTN = document.querySelector("nav .btn-outline-warning");
+        let logoutBTN = document.querySelector("nav .btn-outline-warning");
         showNav();
         logoutBTN.addEventListener("click", logOut)
     }
