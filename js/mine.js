@@ -4,15 +4,15 @@ regexEmail =/^([_a-z0-9]+[\._a-z0-9]*)(\+[a-z0-9]+)?@(([a-z0-9-]+\.)*[a-z]{2,4})
 regexName =/^\w{3,10}\s?\w{0,5}\d?$/gmi;
 regexPass= /^(?=.*\w).(?=.*\d).{8,20}$/;
 //==========================================================//
-var session={
+let session={
     id : "",
     uName : "",
     uEmail : "",
     rDate : "",
 }
-var curentPage;
-var users;
-var content= document.querySelector(".content");
+let curentPage;
+let users;
+let content= document.querySelector(".content");
 
 if (localStorage.getItem("user") == null) {
     users = [];
@@ -30,9 +30,7 @@ if (sessionStorage.getItem("session") == null) {
 }
 
 function routing(){
-    let email;
-    let myPassword;
-    let msg;
+
     if (curentPage == "loginPage"){
         content.innerHTML=`<h1 class="text-center t-color py-4">Smart Login System</h1> 
         <div class="login mx-5">
@@ -92,16 +90,16 @@ function routing(){
             </div>
         </div>`;        
         let username = document.getElementById("username");
-        email = document.getElementById("email");
-        myPassword = document.getElementById("pws");
+        let email = document.getElementById("email");
+        let myPassword = document.getElementById("pws");
         let signupBTN = document.querySelector("#regBtn");
         let testname="";
         let testpass="";
         let testmail="";
         let testDmail="";
-        
-        let toSignup = signupBTN.addEventListener("click" , regist);
         email.addEventListener("keyup", emailDub);
+        let toSignup = signupBTN.addEventListener("click" , regist);
+        
         function regist(){
             //============validation================//
             validName();
