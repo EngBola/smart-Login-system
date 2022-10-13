@@ -47,8 +47,6 @@ function routing(){
         msg = document.querySelector(".errorMsg");
         let toLogin = document.querySelector("#loginBtn").addEventListener("click", login );
         function login(){
-            console.log(email.value);
-            console.log(myPassword.value);
             if(email.value == "" || myPassword.value == ""){
                 toLogin;
                 msg.innerHTML= "email or password can\'t be empty";
